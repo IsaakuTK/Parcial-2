@@ -1,6 +1,30 @@
-.card{
+:host {
     display: flex;
     flex-direction: column;
+    background-color: black;
+    min-height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+    padding: 20px; /* Opcional: espacio alrededor del contenido */
+    gap: 20px;
+}
+
+.button-container{
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 3px;
     margin-top: 10px;
+    gap: 20px;
+    width: 100%;
+    height:fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top:30px;
+    gap: 20px;
 }

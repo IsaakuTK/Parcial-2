@@ -52,12 +52,18 @@ class Card extends HTMLElement{
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <section class = "all">
-                <img src="${this.icon_url}">
-                <p>${this.idu}</p>
-                <p>${this.url}</p>
-                <p>${this.value}</p>
-                </section>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class="title" src="${this.icon_url}">
+                            <p>${this.idu}</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="${this.url}" target="_blank" class="title">Ver en API</a>
+                            <p>${this.value}</p>
+                        </div>
+                    </div>
+                </div>
             `;
             const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;

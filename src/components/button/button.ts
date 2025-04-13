@@ -43,9 +43,13 @@ class Button extends HTMLElement{
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <section class = "all">
-                <button class ="b">${this.name}</button>
-                </section>
+                <button class="button">
+                    <div>
+                        <div>
+                        <div>${this.name}</div>
+                        </div>
+                    </div>
+                </button>
             `;
             const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;
